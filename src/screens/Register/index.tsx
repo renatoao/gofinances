@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 import { Button } from "../../components/Forms/Button";
 import { InputForm } from "../../components/Forms/InputForm";
-import { Input } from "../../components/Forms/Input";
+
 import { TransactionTypeButton } from "../../components/Forms/TransactionTypeButton";
 import { CategorySelectButton } from "../../components/Forms/CategorySelectButton";
 
