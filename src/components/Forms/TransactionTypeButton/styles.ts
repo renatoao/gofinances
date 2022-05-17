@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components/native";
-import { TouchableOpacity } from "react-native";
+import { RectButton } from "react-native-gesture-handler";
 import { Feather } from '@expo/vector-icons';
 import { RFValue } from "react-native-responsive-fontsize";
 
@@ -12,16 +12,13 @@ interface BProps {
     type: 'up' | 'down';
 }
 
-export const Container = styled(TouchableOpacity) <BProps>`
-    width: 48%;
-    
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+export const Container = styled.View<BProps>`
+    width: 100%;
 
     border: ${({ isActive }) => isActive ? 0 : 1.5}px ${({ theme }) => theme.colors.text};
     border-radius: 5px;
-    padding: 16px;
+    flex-direction: row;
+    align-items: center;
 
     ${({ isActive, type }) => isActive && type === 'up' && css`
         background-color: ${({ theme }) => theme.colors.success_light};
@@ -37,6 +34,13 @@ export const Container = styled(TouchableOpacity) <BProps>`
 export const Title = styled.Text`
     font-size: ${RFValue(14)}px;
     font-family: ${({ theme }) => theme.fonts.regular};
+`;
+
+export const Button = styled(RectButton)`
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
 
 `;
 

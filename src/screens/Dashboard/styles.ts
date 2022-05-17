@@ -1,5 +1,6 @@
 import styled from "styled-components/native";
 import { Platform, FlatList } from "react-native";
+import { BorderlessButton } from "react-native-gesture-handler";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import { Feather } from '@expo/vector-icons';
 import { getStatusBarHeight, getBottomSpace } from 'react-native-iphone-x-helper';
@@ -100,4 +101,8 @@ export const TransactionList = styled(
 })`
     font-size: ${RFValue(18)}px;
     font-family: ${({ theme }) => theme.fonts.regular};
+`;
+
+export const LogoutButton = styled(BorderlessButton)`
+    
 `;
